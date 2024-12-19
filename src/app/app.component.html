@@ -224,6 +224,37 @@
   <input type="password" />
 </flex-container>
 
+<br>
+<br>
+<br>
+<app-toggle [(checked)]="questions.question1">
+  <span>Question 1</span>
+</app-toggle>
+
+<app-toggle [(checked)]="questions.question2">
+  <span>Question 2</span>
+</app-toggle>
+
+<br>
+<br>
+<br>
+<app-toggle [(checked)]="questions.question1">
+  <h3 class="toogle-header">Header 1</h3>
+  <label>Question 1</label>
+  <span>Some paragraph</span>
+</app-toggle>
+
+<app-toggle [(checked)]="questions.question1">
+  <h3 class="toogle-header">Header 1</h3>
+  <label ngProjectAs="app-label">Question 1</label>
+  <span>Some paragraph</span>
+</app-toggle>
+
+<br>
+<br>
+<br>
+
+<app-example></app-example>
   <!-- <div class="content">
     <div class="left-side">
       <svg
