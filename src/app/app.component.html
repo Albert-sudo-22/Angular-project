@@ -203,8 +203,13 @@
 <input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
 <br>
 <br>
-<app-toggle [(checked)]="checked"></app-toggle>
+<!-- <app-toggle [(checked)]="checked"></app-toggle> -->
 
+<button (click)="toggleInside()">Toggle inside class</button>
+<br />
+<br />
+
+<app-toggle #toggleComp></app-toggle>
 
 
 

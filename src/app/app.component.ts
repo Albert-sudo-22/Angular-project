@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HelloComponent } from './hello.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -17,4 +17,14 @@ export class AppComponent {
   title = 'angular-project';
   name = 'James Bond';
   checked = false;
+
+  @ViewChild('toggleComp') toggleComp!: ToggleComponent;
+  toggleInside() {
+    this.toggleComp.toggle();
+  }
+
+  @ViewChildren(ToggleComponent) toggleList!: QueryList<ToggleComponent>;
+  ngAfterViewInit() {
+  console.log(this.toggleList);
+}
 }
