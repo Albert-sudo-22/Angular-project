@@ -11,7 +11,7 @@ import { NgFor } from '@angular/common';
   ></app-author-detail>
   <br>
   <div>
-    Current selected Authors: {{currentAuthor?.firstName}} {{currentAuthor?.lastName}}
+    Current selected Authors: {{currentAuthor.firstName}} {{currentAuthor.lastName}}
   </div>`,
   styles: [``],
   imports: [AuthorDetailComponent, NgFor],
@@ -22,9 +22,6 @@ export class AuthorListComponent implements OnInit {
   currentAuthor = authors[0];
   constructor() {}
   ngOnInit() {}
-  handleDelete(author: Author) {
-    this.authors = this.authors.filter((item) => item.id !== author.id);
-  }
 
   onSelected(selectedAuthor: Author){
     this.currentAuthor = selectedAuthor;
