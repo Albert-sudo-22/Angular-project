@@ -18,6 +18,7 @@ import { NgFor } from '@angular/common';
 </div>  
 
     `,
+    standalone: true
   })
 
   export class HelloComponent {

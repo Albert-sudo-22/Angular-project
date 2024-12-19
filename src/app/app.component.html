@@ -179,6 +179,7 @@
 </style>
 
 <main class="main">
+  {{title}}
   <app-hello></app-hello>
 
   <br>
@@ -193,6 +194,20 @@
 <br>
 
 <app-author-list></app-author-list>
+
+<br>
+<br>
+<br>
+<p>Your name: {{ name }}</p>
+<br>
+<input type="text" [ngModel]="name" (ngModelChange)="name = $event" />
+<br>
+<br>
+<app-toggle [(checked)]="checked"></app-toggle>
+
+
+
+
   <!-- <div class="content">
     <div class="left-side">
       <svg

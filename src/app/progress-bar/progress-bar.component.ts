@@ -10,6 +10,7 @@ import {
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
   styleUrl: './progress-bar.component.css',
+  standalone: true
 })
 
 export class ProgressBarComponent implements OnInit, OnChanges {
