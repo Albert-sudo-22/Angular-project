@@ -5,10 +5,11 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { AuthorListComponent } from './authors/author-list/author-list.component';
 import { FormsModule } from '@angular/forms';
 import { ToggleComponent } from './toggle/toggle.component';
+import { FlexComponent } from './flex-container.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HelloComponent, ProgressBarComponent,AuthorListComponent, FormsModule,ToggleComponent],
+  imports: [RouterOutlet, HelloComponent, ProgressBarComponent,AuthorListComponent, FormsModule,ToggleComponent, FlexComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
