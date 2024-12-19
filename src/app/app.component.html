@@ -178,7 +178,21 @@
 </style>
 
 <main class="main">
-  <div class="content">
+  <app-hello></app-hello>
+
+  <br>
+  <app-progress-bar
+  [progress]="50"
+  [setBackground]="'#9e9e9e'"
+  [setprogressColor]="'#2e8b57'"
+>
+</app-progress-bar>
+
+<br>
+<br>
+
+<app-author-list></app-author-list>
+  <!-- <div class="content">
     <div class="left-side">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -321,7 +335,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -1,0 +1,13 @@
+<div
+  class="progress-bar-container"
+  [style.backgroundColor]="backgroundColor || null"
+>
+  Progress-bar works~!
+  <div
+    class="progress"
+    [style]="{
+      backgroundColor: progressColor,
+      width: progress + '%'
+    }"
+  ></div>
+</div>
