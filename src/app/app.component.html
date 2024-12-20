@@ -129,6 +129,31 @@
     </ng-template>
   </app-tab-panel>
 </app-bs-tab-group>
+
+<br>
+<br>
+<br>
+<p>{{currentDate | date}}</p>
+<p>{{currentDate | date:"shortDate"}}</p>
+<p>{{currentDate | date:"mediumDate"}}</p>
+<p>{{currentDate | date:"fullDate"}}</p>
+<p>{{currentDate | date:"yyyy/MM/dd"}}</p>
+
+<p>{{addr | formatAddress}}</p>
+
+<br>
+Full user list:
+<ul>
+  <li *ngFor="let user of users"> {{user.name}} - {{user.age}}</li>
+</ul>
+
+<br>
+Adult user list:
+<ul>
+  <li *ngFor="let user of users | adult"> {{user.name}} - {{user.age}}</li>
+</ul>
+
+<button (click)="addUser()">Add User</button>
   <!-- <div class="content">
     <div class="left-side">
       <svg

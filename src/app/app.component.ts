@@ -12,14 +12,15 @@ import { TabGroupComponent } from './tabs/tab-group.component';
 import { TabPanelComponent } from './tabs/tab-panel.component';
 import { BsTabGroupComponent } from "./tabs/bs-tab-group.component";
 import { CounterComponent } from './counter/counter.component';
-import { TabContentDirective } from './tabs/tab-content.directive';
+import { formatAddressPipe } from './format-address.pipe';
+import { AdultPipe } from './adult.pipe';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HelloComponent, ProgressBarComponent,
     AuthorListComponent, FormsModule, ToggleComponent, FlexComponent,
     CommonModule, ExampleComponent, TabGroupComponent, TabPanelComponent, BsTabGroupComponent
-  , CounterComponent, TabContentDirective],
+  , CounterComponent, formatAddressPipe, AdultPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -33,6 +34,43 @@ export class AppComponent {
     question2: false,
   };
   currentIndex = 0;
+  currentDate = new Date;
+
+  users = [{
+    name: "Jack",
+    age: 30
+  },
+{
+  name: "Bob",
+  age: 28
+},
+{
+  name: "James",
+  age: 29
+},
+{
+  name: "Jake",
+  age: 16
+}];
+
+addUser(){
+  this.users = [...this.users, {name: 'new user', age: 30}];
+}
+
+  addr = {
+    address1: "123 Some st",
+    address2: "STE100",
+    city: "Acme",
+    state: "State",
+    zip: "12345",
+    country: "US"
+  };
+
+
+  formatAddress(addr: { address1: string; address2: string; city: string; state: string; zip: string; country: string; }){
+    return addr.address1 + " " + addr.address2 + ", " + addr.city + ", " 
+    + addr.state + ", " + addr.zip + ", " + addr.country
+  }
 
   @ViewChild('toggleComp') toggleComp!: ToggleComponent;
   toggleInside() {
