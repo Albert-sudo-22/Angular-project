@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy, Input, ViewChild, TemplateRef } from "@angular/core";
+import { Component, OnInit, OnDestroy, Input, ViewChild, TemplateRef, ContentChild } from "@angular/core";
 import { TabGroupComponent } from "./tab-group.component";
+import { TabContentDirective } from "./tab-content.directive";
 
 @Component({
     selector: 'app-tab-panel',
@@ -12,9 +13,17 @@ import { TabGroupComponent } from "./tab-group.component";
   })
   export class TabPanelComponent implements OnInit, OnDestroy {
     @Input() title!: string;
-    @ViewChild(TemplateRef, { static: true }) panelBody!: TemplateRef<unknown>;
+    @ViewChild(TemplateRef, { static: true }) implicitBody: TemplateRef<unknown> | undefined;
+    @ContentChild(TabContentDirective, { static: true, read: TemplateRef })
+    explicitBody: TemplateRef<unknown> | undefined; // Use TemplateRef<unknown> directly here
+
     constructor(private tabGroup: TabGroupComponent) {}
-  
+
+    get panelBody(): TemplateRef<unknown> {
+       return this.explicitBody || this.implicitBody!;
+    }
+
+    
     ngOnInit() {
       this.tabGroup.addTabPanel(this);
     }

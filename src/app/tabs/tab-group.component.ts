@@ -13,6 +13,7 @@ import { CommonModule } from "@angular/common";
   
     @Input() tabActiveIndex = 0;
     @Output() tabActiveIndexChange = new EventEmitter<number>();
+    
     constructor() {}
   
     ngOnInit() {}

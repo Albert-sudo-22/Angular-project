@@ -96,6 +96,9 @@
   <app-tab-panel title="Fourth tab"> Fourth tab content</app-tab-panel>
 </app-tab-group>
 
+<br>
+<br>
+
 <app-bs-tab-group [(tabActiveIndex)] ="currentIndex">
   <app-tab-panel title="First tab"> First tab content</app-tab-panel>
   <app-tab-panel title="Second tab"> Second tab content</app-tab-panel>
@@ -103,6 +106,29 @@
   <app-tab-panel title="Fourth tab"> Fourth tab content</app-tab-panel>
 </app-bs-tab-group>
 
+
+<br>
+<br>
+<app-bs-tab-group>
+  <app-tab-panel title="Tab 1">
+    <ng-template tabPanelContent>
+      content tab 1
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Tab 2">
+    <ng-template tabPanelContent>
+      content tab 2
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+  <app-tab-panel title="Tab 3">
+    <ng-template tabPanelContent>
+      content tab 3
+      <app-counter></app-counter>
+    </ng-template>
+  </app-tab-panel>
+</app-bs-tab-group>
   <!-- <div class="content">
     <div class="left-side">
       <svg

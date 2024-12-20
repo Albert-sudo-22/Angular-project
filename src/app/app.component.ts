@@ -11,12 +11,15 @@ import { ExampleComponent } from "./example.component";
 import { TabGroupComponent } from './tabs/tab-group.component';
 import { TabPanelComponent } from './tabs/tab-panel.component';
 import { BsTabGroupComponent } from "./tabs/bs-tab-group.component";
+import { CounterComponent } from './counter/counter.component';
+import { TabContentDirective } from './tabs/tab-content.directive';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HelloComponent, ProgressBarComponent,
     AuthorListComponent, FormsModule, ToggleComponent, FlexComponent,
-    CommonModule, ExampleComponent, TabGroupComponent, TabPanelComponent, BsTabGroupComponent],
+    CommonModule, ExampleComponent, TabGroupComponent, TabPanelComponent, BsTabGroupComponent
+  , CounterComponent, TabContentDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
