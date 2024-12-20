@@ -8,12 +8,15 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { FlexComponent } from './flex-container.component';
 import { CommonModule } from '@angular/common';
 import { ExampleComponent } from "./example.component";
+import { TabGroupComponent } from './tabs/tab-group.component';
+import { TabPanelComponent } from './tabs/tab-panel.component';
+import { BsTabGroupComponent } from "./tabs/bs-tab-group.component";
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HelloComponent, ProgressBarComponent,
     AuthorListComponent, FormsModule, ToggleComponent, FlexComponent,
-    CommonModule, ExampleComponent],
+    CommonModule, ExampleComponent, TabGroupComponent, TabPanelComponent, BsTabGroupComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -26,6 +29,7 @@ export class AppComponent {
     question1: true,
     question2: false,
   };
+  currentIndex = 0;
 
   @ViewChild('toggleComp') toggleComp!: ToggleComponent;
   toggleInside() {
