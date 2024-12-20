@@ -10,15 +10,20 @@
         [class.active]="idx === tabActiveIndex"
         role="tab"
         aria-selected="true"
-        >{{tab.title}}</a
-      >
+        >{{tab.title}}
+      <button class="btn btn-sm btn-danger" (click)="removeTabPanel(tab)">x</button>
+      </a>
     </li>
   </ul>
   
-  <div class="tab-content">
+  <div class="tab-content" *ngIf="tabPanelList.length; else noTab">
     <ng-container *ngFor="let tab of tabPanelList; index as idx">
       <div class="tab-pane active" role="tabpanel" *ngIf="idx === tabActiveIndex">
         <ng-container *ngTemplateOutlet="tab.panelBody"></ng-container>
       </div>
     </ng-container>
   </div>
+
+  <ng-template #noTab>
+    No more tabs.
+  </ng-template>
