@@ -18,7 +18,6 @@ export class ProgressBarComponent implements OnInit, OnChanges {
 
   @Input()
   set setBackground(value: string) {
-    debugger;
     this.backgroundColor = value;
   }
 
@@ -30,7 +29,6 @@ export class ProgressBarComponent implements OnInit, OnChanges {
   @Input() progress = 0;
 
   constructor() {
-    debugger;
   }
 
   ngOnChanges(changes: SimpleChanges) {

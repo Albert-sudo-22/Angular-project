@@ -14,6 +14,7 @@ import { BsTabGroupComponent } from "./tabs/bs-tab-group.component";
 import { CounterComponent } from './counter/counter.component';
 import { formatAddressPipe } from './format-address.pipe';
 import { AdultPipe } from './adult.pipe';
+import './example-RxJS';
 
 @Component({
   selector: 'app-root',
