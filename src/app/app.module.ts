@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { ExampleComponent } from './example.component';
 import { DataService } from './data.service';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppComponent, ToggleComponent, ExampleComponent],
+  imports: [BrowserModule, FormsModule, AppComponent, ToggleComponent, ExampleComponent,AppRoutingModule],
   providers: [DataService]
 })
 

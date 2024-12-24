@@ -1,5 +1,5 @@
 import { Component, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HelloComponent } from './hello.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { AuthorListComponent } from './authors/author-list/author-list.component';
@@ -21,7 +21,7 @@ import './example-RxJS';
   imports: [RouterOutlet, HelloComponent, ProgressBarComponent,
     AuthorListComponent, FormsModule, ToggleComponent, FlexComponent,
     CommonModule, ExampleComponent, TabGroupComponent, TabPanelComponent, BsTabGroupComponent
-  , CounterComponent, formatAddressPipe, AdultPipe],
+  , CounterComponent, formatAddressPipe, AdultPipe,RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
